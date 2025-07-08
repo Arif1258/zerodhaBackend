@@ -16,7 +16,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: "https://zerodha-frontend-gamma.vercel.app", // Removed trailing slash
+    origin: "https://zerodha-dashboard-rosy.vercel.app/", // Removed trailing slash
   })
 );
 
