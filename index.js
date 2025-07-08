@@ -15,7 +15,12 @@ const uri = process.env.MONGO_URL;
 
 const app = express();
 
-app.use(cors());
+app.use(
+  cors({
+    origin: "https://zerodha-frontend-gamma.vercel.app/",
+  })
+);
+
 app.use(bodyParser.json());
 
 // app.get("/addHoldings", async (req, res) => {
