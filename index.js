@@ -62,6 +62,16 @@ app.post("/api/orders", async (req, res) => {
   }
 });
 
+app.get("/api/orders", async (req, res) => {
+  try {
+    const allOrders = await OrdersModel.find({});
+    res.json({ success: true, data: allOrders });
+  } catch (error) {
+    console.error("Error fetching orders:", error);
+    res.status(500).json({ success: false, message: "Internal Server Error" });
+  }
+});
+
 // Connect to MongoDB and start the server
 mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => {
