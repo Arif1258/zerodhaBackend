@@ -18,7 +18,7 @@ const app = express();
 app.use(
   cors({
     origin: [
-      "https://zerodhabackend-lb15.onrender.com", // Your production frontend
+      "https://zerodhadashboard-ap2k.onrender.com", // Your production frontend
       "http://localhost:3000" // For local development
     ],
     methods: ["GET", "POST", "PUT", "DELETE"],
